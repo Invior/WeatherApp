@@ -35,11 +35,10 @@ export async function getGeolocation(city) {
   }
 }
 
-export async function getForecast(latitude, longitude) {
+export async function getForecast(city) {
   try {
     const response = await fetch(
-      baseHost +
-        `data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=98028faffe661408eaa966b05e94361d&lang=ru&units=metric`
+      `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=0869348564df48e2ace49be8e0206c5c&days=6&lang=ru`
     );
     if (!response.ok) {
       if (response.status === 401) {
