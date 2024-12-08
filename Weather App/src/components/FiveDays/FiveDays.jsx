@@ -21,7 +21,7 @@ function FiveDays() {
 
   if (forecast) {
     return (
-      <div className="flex flex-row justify-around border-t-2 pt-12">
+      <div className="flex flex-col gap-[40px] lg:flex-row justify-around border-t-2 pt-12">
         {forecast.slice(1).map((item) => (
           <Day
             key={item.datetime}
