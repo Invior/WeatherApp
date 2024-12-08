@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
-import { getGeolocation } from "../../utils/api";
+import { useGeolocation } from "../../contexts/GeolocationContext";
 
 function CurrentWeather() {
-
+ const { geolocation } = useGeolocation();
+ 
+if (!geolocation) {
+  return <p>Получение локации...</p>;
+} else {
   return (
     <div className="flex flex-row gap-[160px] mb-[200px]">
       <div>
-        <h1 className="cityName text-white text-9xl font-bold">Тольятти</h1>
+        <h1 className="cityName text-white text-9xl font-bold">{geolocation.local_names}</h1>
         <p className="currentDate text-white text-5xl">Вторник, 03.12</p>
         <div className="flex flex-row text-white text-6xl mt-4 items-center">
           <img src="https://openweathermap.org/img/wn/03n@2x.png" alt="иконка"/>
@@ -19,7 +22,9 @@ function CurrentWeather() {
         <p>Ощущается как: 11<sup>o</sup>C</p>
       </div>
     </div>
-  );
+  )
+}
+
 }
 
 export default CurrentWeather;

@@ -1,8 +1,7 @@
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import FiveDays from "../FiveDays/FiveDays";
 
-function Main({ value }) {
-  console.log(value);
+function Main() {
 
   return (
     <main className="m-8">

@@ -28,7 +28,6 @@ export async function getGeolocation(city) {
         `geo/1.0/direct?q=${city}&appid=98028faffe661408eaa966b05e94361d`
     );
     const data = await response.json();
-    console.log("Geolocation API response:", data);
     return data;
   } catch (error) {
     console.error("Ошибка при получении данных геолокации:", error);
