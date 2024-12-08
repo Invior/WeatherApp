@@ -1,6 +1,6 @@
 const baseHost = "http://api.openweathermap.org/";
 
-export async function getCurrentWeather({ lat, lon }) {
+export async function getCurrentWeather(lat, lon) {
   try {
     const response = await fetch(
       baseHost +
