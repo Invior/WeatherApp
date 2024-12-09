@@ -14,7 +14,7 @@ function Header() {
         updateGeolocation(lat, lon, local_names.ru);
       })
       .catch((error) => {
-        console.error(error);
+        alert("Не корректно указан город");
       });
   };
 
