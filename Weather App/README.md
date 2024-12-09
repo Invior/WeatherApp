@@ -1,8 +1,17 @@
-# React + Vite
+### Как разрабатывать
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Установите зависимости командой `npm install`
+- Запустите dev сервер `npm run dev`
+- Откройте адрес в браузере
 
-Currently, two official plugins are available:
+### Стек и инструменты
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Для стилей в коде используются Tailwind CSS.
+
+### Доступные команды
+
+#### `npm run dev`
+
+Запускает приложение в режиме разработки.
+
+Откройте [http://localhost:5173/](http://localhost:5173/) чтобы посмотреть его в браузере.
